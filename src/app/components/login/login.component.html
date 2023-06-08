@@ -1,1 +1,30 @@
-<p>login works!</p>
+
+<mat-card class="login-card">
+  <mat-toolbar color="primary">
+    <span>Login</span>
+  </mat-toolbar>
+  <mat-card-content>
+
+<form class="example-form">
+  <mat-form-field class="example-form">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="exemplo@exemplo.com">
+  </mat-form-field>
+
+  <mat-form-field class="example-form">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="login-button">Login</button>
+</form>
+<div class="cadastro">
+<a href="#" routerLink="/cadastro">Cadastrar-se</a>
+</div>
+<div class="recuperar-senha">
+  <a routerLink="#">recuperar senha</a>
+</div>
+</mat-card-content>
+</mat-card>
